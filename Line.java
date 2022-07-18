@@ -1,13 +1,15 @@
 class Line {
     private Point A;
     private Point B;
-    private Point INFINITY1;
-    private Point INFINITY2;
+    private Point startPoint;
+    private Point endPoint;
 
     public Line(Point A, Point B)
     {
         this.A = A;
         this.B = B;
+        this.startPoint = new Point(Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY);
+        this.endPoint = new Point(Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY);
     }
 
     public Boolean isOnTheLine(Point C)
@@ -27,5 +29,15 @@ class Line {
         }
 
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Line{" +
+                "A=" + A +
+                ", B=" + B +
+                ", startPoint=" + startPoint +
+                ", endPoint=" + endPoint +
+                '}';
     }
 }

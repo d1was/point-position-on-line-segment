@@ -28,4 +28,11 @@ class LineSegment {
         return Math.sqrt( (Math.pow(B.getX() - A.getX(), 2)) + (Math.pow(B.getY() - A.getY(), 2)) );
     }
 
+    @Override
+    public String toString() {
+        return "LineSegment{" +
+                "A=" + A +
+                ", B=" + B +
+                '}';
+    }
 }
